@@ -1,0 +1,35 @@
+$fonts_dir: '../fonts/';
+
+@mixin font($family, $name) {
+  $font_file_path: '../fonts/' + $family;
+
+  @font-face {
+    font-family: $name;
+    src: url($font_file_path+'.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+@mixin font-mixin($font_name) {
+  font-family: '#{$font_name}';
+  font-weight: normal;
+  font-style: normal;
+}
+
+@include font('Roboto/Regular', 'Roboto-Regular');
+@mixin regular() {
+  @include font-mixin('Roboto-Regular');
+}
+
+@include font('Roboto/Medium', 'Roboto-Medium');
+@mixin medium() {
+  @include font-mixin('Roboto-Medium');
+  font-weight: 500;
+}
+
+@include font('Roboto/Bold', 'Roboto-Bold');
+@mixin bold() {
+  @include font-mixin('Roboto-Bold');
+  font-weight: 700;
+}

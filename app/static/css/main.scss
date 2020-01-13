@@ -1,0 +1,15 @@
+@import 'imports';
+
+@import 'layout/header';
+@import 'layout/footer';
+
+@import 'components/button';
+@import 'components/checkbox';
+
+
+.bold {
+  @include bold();
+}
+.medium {
+  @include medium();
+}

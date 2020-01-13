@@ -1,0 +1,59 @@
+@mixin rotate($deg: 180deg) {
+  transform: rotate($deg);
+}
+
+@mixin transition($property: all) {
+  transition: $property 0.2s linear;
+}
+
+@mixin letter-spacing($photoshop) {
+  letter-spacing: #{$photoshop / 1000}em;
+}
+
+@mixin mobile-s() {
+  @media (max-width: $mobileSMedia) {
+    @content;
+  }
+}
+
+@mixin mobile-m() {
+  @media (max-width: $mobileMMedia) {
+    @content;
+  }
+}
+
+@mixin mobile() {
+  @media (max-width: $mobileMedia) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media (min-width: $mobileMedia + 1) and (max-width: $tabletMedia) {
+    @content;
+  }
+}
+
+@mixin tablet-and-phone() {
+  @media (max-width: $tabletMedia) {
+    @content;
+  }
+}
+
+@mixin laptop() {
+  @media (min-width: $tabletMedia + 1) and (max-width: $desctopMedia) {
+    @content;
+  }
+}
+
+@mixin desktop() {
+  @media (min-width: $desctopMedia + 1) {
+    @content;
+  }
+}
+
+@mixin laptop-and-desctop() {
+  @media (min-width: $tabletMedia + 1) {
+    @content;
+  }
+}

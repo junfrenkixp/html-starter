@@ -1,0 +1,11 @@
+@import 'mixins/mixins';
+@import 'config/variables';
+@import 'config/fonts';
+
+@import 'libs/normalize';
+@import 'libs/grid';
+
+$images_dir: '../images/';
+
+@import 'common';
+@import 'typography';
